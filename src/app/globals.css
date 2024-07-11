@@ -1,11 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
+  --basicos-black: #000000;
+  --basicos-white: #ffffff;
+  --neutrales-100: #e9ebeb;
+  --neutrales-200: #d7dadc;
+  --neutrales-300: #c4c9cb;
+  --neutrales-400: #b3b9bc;
+  --neutrales-50: #f6f7f7;
+  --neutrales-500: #a2aaad;
+  --neutrales-600: #8a9193;
+  --neutrales-700: #73797b;
+  --neutrales-800: #5c6163;
+  --neutrales-900: #494c4e;
+  --primary1-100: #c8ccdb;
+  --primary1-200: #9ca3be;
+  --primary1-300: #6e799f;
+  --primary1-400: #425082;
+  --primary1-50: #e8eaf0;
+  --primary1-500: #192a67;
+  --primary1-600: #152458;
+  --primary1-700: #121e49;
+  --primary1-800: #0e183b;
+  --primary1-900: #0b132e;
+  --primary2-100: #ffd5c2;
+  --primary2-200: #ffb491;
+  --primary2-300: #fe915e;
+  --primary2-400: #fe702e;
+  --primary2-50: #ffeee6;
+  --primary2-500: #fe5000;
+  --primary2-600: #d84400;
+  --primary2-700: #b43900;
+  --primary2-800: #912e00;
+  --primary2-900: #722400;
+  --secondary1-100: #eef6fa;
+  --secondary1-200: #e1eff6;
+  --secondary1-300: #d3e7f2;
+  --secondary1-400: #c6e0ef;
+  --secondary1-50: #f8fbfd;
+  --secondary1-500: #b9d9eb;
+  --secondary1-600: #9db8c8;
+  --secondary1-700: #839aa7;
+  --secondary1-800: #697c86;
+  --secondary1-900: #53626a;
+  --secondary2-100: #fdf8e4;
+  --secondary2-200: #fcf2ce;
+  --secondary2-300: #fbebb8;
+  --secondary2-400: #f9e6a2;
+  --secondary2-50: #fefcf4;
+  --secondary2-500: #f8e08e;
+  --secondary2-600: #d3be79;
+  --secondary2-700: #b09f65;
+  --secondary2-800: #8d8051;
+  --secondary2-900: #706540;
+  --semantico-error-100: #fbd2cf;
+  --semantico-error-200: #f9afa9;
+  --semantico-error-300: #f68982;
+  --semantico-error-400: #f3665c;
+  --semantico-error-50: #feeceb;
+  --semantico-error-500: #f04438;
+  --semantico-error-600: #cc3a30;
+  --semantico-error-700: #aa3028;
+  --semantico-error-800: #892720;
+  --semantico-error-900: #6c1f19;
+  --semantico-info-100: #cde4fe;
+  --semantico-info-200: #a5cffd;
+  --semantico-info-300: #7bb9fc;
+  --semantico-info-400: #54a4fb;
+  --semantico-info-50: #eaf4ff;
+  --semantico-info-500: #2e90fa;
+  --semantico-info-600: #277ad5;
+  --semantico-info-700: #2166b2;
+  --semantico-info-800: #1a528f;
+  --semantico-info-900: #154170;
+  --semantico-success-100: #c6eedb;
+  --semantico-success-200: #99e0bf;
+  --semantico-success-300: #6ad2a1;
+  --semantico-success-400: #3dc485;
+  --semantico-success-50: #e7f8f0;
+  --semantico-success-500: #12b76a;
+  --semantico-success-600: #0f9c5a;
+  --semantico-success-700: #0d824b;
+  --semantico-success-800: #0a683c;
+  --semantico-success-900: #085230;
+  --semantico-warning-100: #fff2d4;
+  --semantico-warning-200: #ffe7b2;
+  --semantico-warning-300: #fedc8e;
+  --semantico-warning-400: #fed26b;
+  --semantico-warning-50: #fffaed;
+  --semantico-warning-500: #fec84b;
+  --semantico-warning-600: #d8aa40;
+  --semantico-warning-700: #b48e35;
+  --semantico-warning-800: #91722b;
+  --semantico-warning-900: #725a22;
+}
+
+[data-theme="dark"] {
+  --background: white;
+  --foreground: white;
+  --basicos-black: #000000;
+  --basicos-white: #ffffff;
+  --neutrales-100: #e9ebeb;
+  --neutrales-200: #d7dadc;
+  --neutrales-300: #c4c9cb;
+  --neutrales-400: #b3b9bc;
+  --neutrales-50: #f6f7f7;
+  --neutrales-500: #a2aaad;
+  --neutrales-600: #8a9193;
+  --neutrales-700: #73797b;
+  --neutrales-800: #5c6163;
+  --neutrales-900: #494c4e;
+  --primary1-100: #c8ccdb;
+  --primary1-200: #9ca3be;
+  --primary1-300: #6e799f;
+  --primary1-400: #425082;
+  --primary1-50: #e8eaf0;
+  --primary1-500: #192a67;
+  --primary1-600: #152458;
+  --primary1-700: #121e49;
+  --primary1-800: #0e183b;
+  --primary1-900: #0b132e;
+  --primary2-100: #ffd5c2;
+  --primary2-200: #ffb491;
+  --primary2-300: #fe915e;
+  --primary2-400: #fe702e;
+  --primary2-50: #ffeee6;
+  --primary2-500: #fe5000;
+  --primary2-600: #d84400;
+  --primary2-700: #b43900;
+  --primary2-800: #912e00;
+  --primary2-900: #722400;
+  --secondary1-100: #eef6fa;
+  --secondary1-200: #e1eff6;
+  --secondary1-300: #d3e7f2;
+  --secondary1-400: #c6e0ef;
+  --secondary1-50: #f8fbfd;
+  --secondary1-500: #b9d9eb;
+  --secondary1-600: #9db8c8;
+  --secondary1-700: #839aa7;
+  --secondary1-800: #697c86;
+  --secondary1-900: #53626a;
+  --secondary2-100: #fdf8e4;
+  --secondary2-200: #fcf2ce;
+  --secondary2-300: #fbebb8;
+  --secondary2-400: #f9e6a2;
+  --secondary2-50: #fefcf4;
+  --secondary2-500: #f8e08e;
+  --secondary2-600: #d3be79;
+  --secondary2-700: #b09f65;
+  --secondary2-800: #8d8051;
+  --secondary2-900: #706540;
+  --semantico-error-100: #fbd2cf;
+  --semantico-error-200: #f9afa9;
+  --semantico-error-300: #f68982;
+  --semantico-error-400: #f3665c;
+  --semantico-error-50: #feeceb;
+  --semantico-error-500: #f04438;
+  --semantico-error-600: #cc3a30;
+  --semantico-error-700: #aa3028;
+  --semantico-error-800: #892720;
+  --semantico-error-900: #6c1f19;
+  --semantico-info-100: #cde4fe;
+  --semantico-info-200: #a5cffd;
+  --semantico-info-300: #7bb9fc;
+  --semantico-info-400: #54a4fb;
+  --semantico-info-50: #eaf4ff;
+  --semantico-info-500: #2e90fa;
+  --semantico-info-600: #277ad5;
+  --semantico-info-700: #2166b2;
+  --semantico-info-800: #1a528f;
+  --semantico-info-900: #154170;
+  --semantico-success-100: #c6eedb;
+  --semantico-success-200: #99e0bf;
+  --semantico-success-300: #6ad2a1;
+  --semantico-success-400: #3dc485;
+  --semantico-success-50: #e7f8f0;
+  --semantico-success-500: #12b76a;
+  --semantico-success-600: #0f9c5a;
+  --semantico-success-700: #0d824b;
+  --semantico-success-800: #0a683c;
+  --semantico-success-900: #085230;
+  --semantico-warning-100: #fff2d4;
+  --semantico-warning-200: #ffe7b2;
+  --semantico-warning-300: #fedc8e;
+  --semantico-warning-400: #fed26b;
+  --semantico-warning-50: #fffaed;
+  --semantico-warning-500: #fec84b;
+  --semantico-warning-600: #d8aa40;
+  --semantico-warning-700: #b48e35;
+  --semantico-warning-800: #91722b;
+  --semantico-warning-900: #725a22;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +207,7 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -30,4 +221,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.ant-float-btn-circle .ant-float-btn-body {
+  background-color: #52c41a !important;
+}
+.ant-float-btn-circle {
+  background-color: #52c41a !important;
+}
+.ant-float-btn-body {
+  background-color: #52c41a !important;
 }
