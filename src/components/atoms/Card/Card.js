@@ -25,14 +25,14 @@ const detailsProjects = [
 
 const Cards = () => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg flex justify-between items-center space-x-4">
+    <div className="bg-white p-4 rounded-lg shadow-lg flex flex-wrap justify-between items-center gap-4">
       {detailsProjects.map((id) => (
         <a
           key={id}
           href={id.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1"
+          className="flex-1 md:flex-none md:w-1/2 lg:w-1/3"
         >
           <div className="relative group bg-white rounded-lg overflow-hidden border-2 border-primary2-400 transition-all hover:shadow-2xl hover:scale-105">
             <Image
@@ -53,14 +53,13 @@ const Cards = () => {
           </div>
         </a>
       ))}
-      <br />
     </div>
   );
 };
 
 export const CardLoading = () => {
   return (
-    <div className="p-4 sm:w-full md:w-1/4 lg:w-2/6 xl:w-1/4">
+    <div className="p-4 w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
       <Card
         hoverable
         cover={<div className="h-64 animate-pulse bg-gray-200"></div>}

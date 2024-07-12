@@ -69,8 +69,10 @@ const CarouselComponent = () => {
               {tech.name}
             </h3>
             <p className="text-md text-neutrales-800">{tech.description}</p>
-            <pre className="text-sm bg-semantico-info-900 text-neutrales-900 p-3 mt-3 rounded-lg shadow-md">
-              <code className="text-white">{tech.exampleCode}</code>
+            <pre className="text-sm bg-semantico-info-900 text-neutrales-900 p-3 mt-3 rounded-lg shadow-md overflow-auto">
+              <code className="text-white whitespace-pre-wrap">
+                {tech.exampleCode}
+              </code>
             </pre>
           </div>
         </div>

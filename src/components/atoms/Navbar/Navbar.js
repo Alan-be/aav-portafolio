@@ -36,23 +36,26 @@ const Navbar = () => {
 
   return (
     <nav className="align-center fixed left-0 top-0 z-[100] mx-auto my-4 flex w-full justify-center">
-      <div className="w-11/12 rounded-full bg-white p-2 shadow-lg md:w-3/4 lg:w-1/2 lg:p-4">
-        <ul className="flex items-center justify-evenly lg:justify-evenly">
+      <div className="w-11/12 rounded-full bg-white p-2 shadow-lg sm:w-full md:w-3/4 lg:w-1/2 lg:p-4">
+        <ul className="flex items-center justify-between sm:justify-evenly text-xs sm:text-sm space-x-0 sm:space-x-1 md:space-x-2 lg:justify-evenly">
           {navigation.map((item) => {
             const isSelected = item.name === selectedLink;
             return (
               <li
                 key={item.name}
                 onClick={() => handleNavLinkClick(item.name)}
-                className="relative cursor-pointer"
+                className="relative cursor-pointer flex-1 md:flex-none"
               >
-                <a href={item.path}>
+                <a
+                  href={item.path}
+                  className="flex flex-col items-center justify-center text-center"
+                >
                   <motion.span
-                    className={`relative text-sm leading-6 no-underline ${
+                    className={`relative no-underline ${
                       isSelected
                         ? "font-semibold text-primary2-500"
                         : "text-neutral-500"
-                    }`}
+                    } block`}
                     whileHover={{ scale: 1.1, color: "#ff4500" }}
                     transition={{ duration: 0.2 }}
                   >

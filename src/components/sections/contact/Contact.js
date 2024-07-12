@@ -11,18 +11,18 @@ const Contact = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center space-y-8 bg-background px-8 py-28 md:px-20  lg:flex-col lg:space-x-8 lg:space-y-0 lg:px-40 justify-center">
+      <div className="flex flex-col items-center space-y-8 bg-background px-8 py-28 sm:px-10 md:px-20 lg:flex-col lg:space-x-8 lg:space-y-0 lg:px-40 justify-center">
         <h1 className="mb-8 text-left text-4xl font-semibold text-primary1-500 lg:text-6xl lg:font-semibold lg:leading-tight 2xl:text-7xl 2xl:font-semibold">
           Contact
         </h1>
-        <div className="bg-white p-8 grid grid-cols-4 gap-4 rounded-lg shadow-xl border border-gray-200">
+        <div className="bg-white p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 rounded-lg shadow-xl border border-gray-200">
           <div className="flex flex-col items-center space-y-3">
             <lord-icon
               src="https://cdn.lordicon.com/nzixoeyk.json"
               trigger="hover"
               style={{ width: "100px", height: "100px" }}
             ></lord-icon>
-            <h3 className="text-xl font-bold text-primary1-500 mt-2">
+            <h3 className="lg:text-xl font-bold text-primary1-500 mt-2">
               alanarevalo1910@gmail.com
             </h3>
           </div>
