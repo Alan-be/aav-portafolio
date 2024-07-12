@@ -25,7 +25,7 @@ const detailsProjects = [
 
 const Cards = () => {
   return (
-    <div className="bg-neutrales-200 p-4 rounded-lg shadow-lg flex justify-between items-center space-x-4">
+    <div className="bg-white p-4 rounded-lg shadow-lg flex justify-between items-center space-x-4">
       {detailsProjects.map((id) => (
         <a
           key={id}
@@ -34,7 +34,7 @@ const Cards = () => {
           rel="noopener noreferrer"
           className="flex-1"
         >
-          <div className="relative group bg-white rounded-lg overflow-hidden border-2 border-neutrales-300 transition-all hover:shadow-2xl hover:scale-105">
+          <div className="relative group bg-white rounded-lg overflow-hidden border-2 border-primary2-400 transition-all hover:shadow-2xl hover:scale-105">
             <Image
               src={id.img}
               alt={id.title}
